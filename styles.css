@@ -1,0 +1,9 @@
+html{
+    min-height: 100%;
+    background-color: beige;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
