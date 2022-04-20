@@ -2,8 +2,37 @@ html{
     min-height: 100%;
     background-color: beige;
 }
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    align-items: center;
+}
+#reset{
+    background-color: beige;
+    border: 3px solid black;
+    padding: 7px;
+    border-radius: 10px;
+    width: 10%;
+    height: 5%;
+}
+.gridContainer{
+   display: inline-grid; 
+   grid-template-columns: repeat(16, 2fr);
+   grid-template-rows: repeat(16, 2fr);
+   border: 3px solid black;
+   border-radius: 5px;
+   height: 575px;
+   width: 575px;
+   margin-top: 2em;
 }
