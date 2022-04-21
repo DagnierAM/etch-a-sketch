@@ -9,7 +9,7 @@ function makeGrid(input = 16) {
         const div = document.createElement('div');
         div.classList.add('square');
         const gridAttributes = document.createAttribute('style');
-        gridAttributes.value = `grid-template-columns: ${gridCol}; grid-template-rows: ${gridRow};`
+        gridAttributes.value = `grid-template-columns: ${gridCol}; grid-template-rows: ${gridRow};`;
         grid.setAttributeNode(gridAttributes);
         grid.appendChild(div);
     }
@@ -25,10 +25,10 @@ function changeColor(e) {
         case 'rainbow':
             grid.addEventListener('mouseover', (e) => {
                 if (e.target.matches('div.square')) {
-                    const randomR = Math.floor(Math.random() * 256)
-                    const randomG = Math.floor(Math.random() * 256)
-                    const randomB = Math.floor(Math.random() * 256)
-                    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+                    const randomR = Math.floor(Math.random() * 256);
+                    const randomG = Math.floor(Math.random() * 256);
+                    const randomB = Math.floor(Math.random() * 256);
+                    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
                 }
             });
             break;
