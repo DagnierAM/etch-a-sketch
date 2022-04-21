@@ -3,16 +3,7 @@ const resetBtn = document.querySelector('#reset');
 const clasicBtn = document.querySelector('#classic');
 const rainbowBtn = document.querySelector('#rainbow');
 
-//original function with fixed number
-/*function createGrid() {
-    for (let i = 0; i < 256; i++) {
-        const div = document.createElement('div');
-        div.classList.add('square');
-        grid.appendChild(div);
-    }
-}
-*/
-// experimental
+
 function makeGrid(input = 16) {
     let gridCol = `repeat(${input}, 1fr)`;
     let gridRow = `repeat(${input}, 1fr)`;
