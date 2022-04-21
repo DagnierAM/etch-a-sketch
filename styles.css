@@ -24,7 +24,8 @@ header{
 
 #reset, 
 #classic,
-#rainbow {
+#rainbow,
+#eraser {
     display: flex;
     justify-content: center;
     align-items: center;
