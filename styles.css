@@ -1,8 +1,6 @@
 html{
     min-height: 100%;
     background-color: beige;
-}
-body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,28 +9,49 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: xx-large;
 }
 .container{
     display: flex;
     flex-direction: column;
-    margin: 50px;
     align-items: center;
 }
-#reset{
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+#reset, 
+#classic,
+#rainbow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: beige;
     border: 3px solid black;
     padding: 7px;
     border-radius: 10px;
-    width: 10%;
-    height: 5%;
+    margin-bottom: 20px;
+    font-size: 1.2vw;
+}
+
+#reset:hover, #classic:hover, #rainbow:hover{
+    cursor: pointer;
 }
 .gridContainer{
    display: inline-grid; 
-   grid-template-columns: repeat(16, 2fr);
-   grid-template-rows: repeat(16, 2fr);
-   border: 3px solid black;
+   /*grid-template-columns: repeat(16, 1fr);
+   grid-template-rows: repeat(16, 1fr);
+   */
+   border: 5px solid black;
    border-radius: 5px;
-   height: 575px;
-   width: 575px;
-   margin-top: 2em;
+   height: 620px;
+   width: 620px;
+}
+.square{
+    border: 3px solid darkgray;
+}
+h2{
+    margin-bottom: 40px;
 }
