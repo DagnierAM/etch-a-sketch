@@ -40,6 +40,7 @@ header{
 #rainbow:hover,
 #eraser:hover{
     cursor: pointer;
+    background-color: blue;
 }
 .gridContainer{
    display: inline-grid; 
