@@ -21,7 +21,6 @@ header{
     justify-content: center;
     gap: 100px;
 }
-
 #reset, 
 #classic,
 #rainbow,
@@ -36,8 +35,10 @@ header{
     margin-bottom: 20px;
     font-size: 1.2vw;
 }
-
-#reset:hover, #classic:hover, #rainbow:hover{
+#reset:hover, 
+#classic:hover, 
+#rainbow:hover,
+#eraser:hover{
     cursor: pointer;
 }
 .gridContainer{

@@ -39,6 +39,7 @@ function changeColor(e) {
             break;
     }
 }
+
 function resetGrid(e) {
     let input = prompt('Enter new grid size from 10 to 50:', 16);
     if (isNaN(input)) {
