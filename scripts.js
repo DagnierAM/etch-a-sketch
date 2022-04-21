@@ -1,12 +1,10 @@
 const grid = document.querySelector('.gridContainer');
 const resetBtn = document.querySelector('#reset');
-const clasicBtn = document.querySelector('#classic');
-const rainbowBtn = document.querySelector('#rainbow');
-
+const buttons = document.querySelectorAll('.buttons');
 
 function makeGrid(input = 16) {
-    let gridCol = `repeat(${input}, 1fr)`;
-    let gridRow = `repeat(${input}, 1fr)`;
+    let gridCol = `repeat(${input}, 2fr)`;
+    let gridRow = `repeat(${input}, 2fr)`;
     for (let i = 0; i < input * input; i++) {
         const div = document.createElement('div');
         div.classList.add('square');
@@ -17,30 +15,36 @@ function makeGrid(input = 16) {
     }
 }
 
-
-
-
 function changeColor(e) {
-    grid.addEventListener('mouseover', (e) => {
-        if (e.target.matches('div.square')) e.target.style.backgroundColor = 'black';
-    });
-}
-function changeColorRandom(e) {
-    grid.addEventListener('mouseover', (e) => {
-        if (e.target.matches('div.square')) {
-            const randomR = Math.floor(Math.random() * 256)
-            const randomG = Math.floor(Math.random() * 256)
-            const randomB = Math.floor(Math.random() * 256)
-            e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
-        }
-    });
+    switch (e.target.id) {
+        case 'classic':
+            grid.addEventListener('mouseover', (e) => {
+                if (e.target.matches('div.square')) e.target.style.backgroundColor = 'black';
+            });
+            break;
+        case 'rainbow':
+            grid.addEventListener('mouseover', (e) => {
+                if (e.target.matches('div.square')) {
+                    const randomR = Math.floor(Math.random() * 256)
+                    const randomG = Math.floor(Math.random() * 256)
+                    const randomB = Math.floor(Math.random() * 256)
+                    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+                }
+            });
+            break;
+        case 'eraser':
+            grid.addEventListener('mouseover', (e) => {
+                if (e.target.matches('div.square')) e.target.style.backgroundColor = 'beige';
+            });
+            break;
+    }
 }
 function resetGrid(e) {
-    let input = prompt('Enter new grid size from 10 to 100:', 16);
+    let input = prompt('Enter new grid size from 10 to 50:', 16);
     if (isNaN(input)) {
         window.alert("You must enter a NUMBER in the range.");
         return;
-    } else if (input < 10 || input > 100) {
+    } else if (input < 10 || input > 50) {
         window.alert('You must enter a number within the given range.');
         return;
     }
@@ -48,10 +52,8 @@ function resetGrid(e) {
     makeGrid(input);
 }
 
-clasicBtn.addEventListener('click', changeColor);
-rainbowBtn.addEventListener('click', changeColorRandom);
+buttons.forEach(btn => btn.addEventListener('click', changeColor));
 resetBtn.addEventListener('click', resetGrid);
-
 
 makeGrid();
 
