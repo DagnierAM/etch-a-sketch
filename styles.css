@@ -41,13 +41,10 @@ header{
 }
 .gridContainer{
    display: inline-grid; 
-   /*grid-template-columns: repeat(16, 1fr);
-   grid-template-rows: repeat(16, 1fr);
-   */
    border: 5px solid black;
    border-radius: 5px;
-   height: 620px;
-   width: 620px;
+   height: 680px;
+   width: 680px;
 }
 .square{
     border: 3px solid darkgray;
